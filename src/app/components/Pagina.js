@@ -34,7 +34,7 @@ export default function Pagina(props) {
                         <Nav className="me-auto">
                             <Nav.Link href="/home" style={{ color: '#ffffff' }}>Início</Nav.Link>
                             <Nav.Link href="/produtos" style={{ color: '#ffffff' }}>Produtos</Nav.Link>
-                            <NavDropdown title={<span style={{ color: '#ffffff' }}>Gêneros</span>} id="basic-nav-dropdown">
+                            <NavDropdown title={<span style={{ color: '#ffffff' }}>Categorias</span>} id="basic-nav-dropdown">
                                 {categoria.map(categoria => (
                                     <div key={categoria.id}>
                                         <NavDropdown.Item
