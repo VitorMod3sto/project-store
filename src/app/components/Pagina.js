@@ -3,11 +3,14 @@ import { useEffect, useState } from "react";
 import { Button, Col, Form, Container, Dropdown, Nav, Navbar, NavDropdown, Row } from "react-bootstrap";
 import { BiLogoVuejs } from "react-icons/bi";
 import { IoPerson } from "react-icons/io5";
+import Footer from "./Footer"
+
 
 
 
 export default function Pagina(props) {
     const [categoria, setCategoria] = useState([])
+    
 
     const traducoes = {
         "electronics": "Eletrônicos",
@@ -26,7 +29,7 @@ export default function Pagina(props) {
     return (
         <>
         
-            <Navbar style={{ backgroundColor: '#003366' }} variant="dark">
+            <Navbar style={{ backgroundColor: '#003366' }} variant="dark" >
                 <Container>
                     <Navbar.Brand href="/home"> <BiLogoVuejs /> </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -38,7 +41,7 @@ export default function Pagina(props) {
                                 {categoria.map(categoria => (
                                     <div key={categoria.id}>
                                         <NavDropdown.Item
-                                            href="/products/categories" style={{ color: '#333333' }}> {traducoes[categoria]}
+                                            href={`/categorias/${categoria}`} style={{ color: '#333333' }}> {traducoes[categoria]}
                                             <Dropdown.Divider />
                                         </NavDropdown.Item>
                                     </div>
@@ -75,6 +78,8 @@ export default function Pagina(props) {
             <Container className="my-3">
                 {props.children}
             </Container>
+            <Footer />
+    
         </>
     )
 }
