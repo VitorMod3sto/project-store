@@ -3,6 +3,7 @@ import { CiFacebook } from "react-icons/ci";
 import { IoLogoInstagram } from "react-icons/io";
 import { FaTiktok } from "react-icons/fa";
 import { FaRegCopyright } from "react-icons/fa";
+import Link from "next/link";
 
 
 export default function Footer() {
@@ -13,13 +14,17 @@ export default function Footer() {
                     <Col xs={12} md={4} className="text-center text-md-start">
                         <p style={{ fontFamily: 'Arial, sans-serif' }}>Vstore</p>
                         <p style={{ fontFamily: 'Arial, sans-serif' }}>
-                        Copyright <FaRegCopyright /> 2024 Vstore. <br/>
-                         Todos os direitos reservados.
+                            Copyright <FaRegCopyright /> 2024 Vstore. <br />
+                            Todos os direitos reservados.
                         </p>
                     </Col>
                     <Col xs={12} md={4} className="text-center">
-                        <p style={{ fontFamily: 'Arial, sans-serif' }}>Categorias</p>
-                        <p style={{ fontFamily: 'Arial, sans-serif' }}>Produtos</p>
+                        <Link href={`/produtos`} style={{ textDecoration: 'none' }}>
+                            <p style={{ fontFamily: 'Arial, sans-serif', color: 'white' }}>Categorias</p>
+                        </Link>
+                        <Link href={`/produtos`} style={{ textDecoration: 'none' }}>
+                            <p style={{ fontFamily: 'Arial, sans-serif', color: 'white' }}>Produtos</p>
+                        </Link>
                     </Col>
                     <Col xs={12} md={4} className="text-center text-md-end">
                         <a href="https://facebook.com" style={{ color: '#ffffff', margin: '0 10px', fontSize: '24px' }}>
